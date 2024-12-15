@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power BI Course</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #090a13;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+     html, body {
+    height: auto; /* Make sure height is not fixed */
+    width: 100%;  /* Ensure the width is set to 100% */
+}
+
+    .btn-primary, .btn-outline-primary {
+      border-radius: 10px;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .section-header {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+    .card {
+      background-color: #161b22;
+      border: none;
+      border-radius: 20px;
+    }
+    .faq-question {
+      cursor: pointer;
+    }
+    .lower-card {
+      margin-top: 20px;
+    }
+    .card img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    }
+    .description-text, .section-description {
+            color: #a3a3a3;
+        }
+        .nav-tabs {
+            border-bottom: none;
+        }
+        .nav-tabs .nav-link {
+            color: #999;
+            border: none;
+        }
+        .nav-tabs .nav-link.active {
+            color: #fff;
+            background-color: transparent;
+            border-bottom: 2px solid #007bff;
+        }
+        .left-nav, .menu-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .left-nav li, .menu-list li {
+            font-size: 1.2rem;
+            margin: 15px 0;
+            cursor: pointer;
+        }
+        .left-nav li.active, .menu-list li.active {
+            color: #4c8bf5;
+            font-weight: bold;
+        }
+        .content-box {
+            background-color: #141722;
+            border-width: 1px;
+            border-color: #383339;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        .section-titlle {
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .list-item, .content-box .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .list-item:last-child, .content-box .item:last-child {
+            border-bottom: none;
+        }
+
+        .preview-btn {
+            background-color: transparent;
+            border: 1px solid #383339;
+            color: #4c8bf5;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+
+        .preview-btn:hover {
+            background-color: #4c8bf5;
+            color: #fff;
+        }
+
+        .stats-box {
+            background-color: #141722;
+            text-align: center;
+            padding: 20px;
+            border-radius: 20px;
+            font-size: 1.5rem;
+            color: #fff;
+        }
+
+        .stats-box span {
+            display: block;
+            font-size: 1rem;
+            color: #aaa;
+        }
+        .container3 {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .title3 {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .subtitle3 {
+            font-size: 1rem;
+            color: #a0aec0;
+            margin-bottom: 40px;
+        }
+
+        .card-container3 {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card3 {
+            background-color: #1e293b;
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .card3:hover {
+            transform: scale(1.05);
+        }
+
+        .card3 img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .card-title3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-text3 {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+        }
+
+        .buttons3 {
+            margin-top: 40px;
+        }
+
+        .buttons3 a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .read-more3 {
+            background-color: #161c2a;
+        }
+
+        .read-more3:hover {
+            background-color: #4c8bf5;
+        }
+
+        .enroll-now3 {
+            background-color: #4c8bf5;
+        }
+
+        .enroll-now3:hover {
+            background-color: #3277ee;
+        }
+        .container4 {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            gap: 50px; /* Increased gap between certificate preview and text */
+        }
+
+        .certificate-preview4 {
+            background-color: #7b7c80;
+            width: 400px;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: #fff;
+            border-radius: 10px;
+        }
+
+        .content4 {
+            max-width: 400px;
+        }
+
+        .title4 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .description4 {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .list4 {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .list4 li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .list4 img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        .list4 span {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+        .amparagraph5 {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #7b7c80;
+        }
+
+        .main-image5 {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .card5 {
+            padding: 15px;
+            background-color: #131722;
+            border-radius: 20px;
+            border: 1px solid #383339;
+            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items:flex-start;
+        }
+
+        .card5 ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .list-bullet5 {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .card5 li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .cards-container5 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .content5 {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 20px;
+        }
+        .container6 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* min-height: 100vh; */
+            padding: 1rem;
+        }
+        .card-container6 {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem; /* gap-8 */
+        }
+        @media (min-width: 768px) {
+            .card-container6 {
+                flex-direction: row;
+            }
+        }
+        .card6 {
+            background-color: #121421; /* bg-gray-800 */
+            padding: 2rem; /* p-8 */
+            border-radius: 15px; /* rounded-lg */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* shadow-lg */
+            width: 100%;
+        }
+        .card6 .badge6 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        .card6 .badge6 span {
+            font-size: 0.75rem; /* text-xs */
+            font-weight: 600; /* font-semibold */
+            color: #ffffff; /* text-white */
+            padding: 0.25rem 0.75rem; /* py-1 px-3 */
+            border-radius: 9999px; /* rounded-full */
+        }
+        .card6 .price-old6 {
+            color: #a0aec0; /* text-gray-400 */
+            text-decoration: line-through;
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+        .card6 .price-new6 {
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        .card6 p {
+            color: #a0aec0; /* text-gray-400 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        .card6 hr {
+            border-color: #4a5568; /* border-gray-700 */
+            margin-bottom: 1rem; /* mb-4 */
+        }
+        .card6 ul {
+            margin-bottom: 2rem; /* mb-8 */
+        }
+        .card6 ul li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem; /* mb-2 */
+        }
+        .card6 ul li i {
+            color: #4299e1; /* text-blue-500 */
+            margin-right: 0.5rem; /* mr-2 */
+        }
+        .card6 button {
+            padding: 0.75rem 1.5rem; /* py-3 px-6 */
+            border-radius: 15px; /* rounded-lg */
+            width: 100%;
+        }
+        .card-self-paced6 .badge6 span {
+            background-color: #1c1938; /* bg-purple-600 */
+        }
+        .card-self-paced6 button {
+            background-color:  #6b46c1; /* bg-purple-600 */
+            color: #ffffff; /* text-white */
+        }
+        .card-mentor-support6 {
+            border: 1px solid #ed8936; /* border-orange-500 */
+        }
+        .card-mentor-support6 .badge6 span {
+            background-color: #29211f; /* bg-orange-600 */
+        }
+        .card-mentor-support6 button {
+            background-color: #ed8936; /* bg-orange-500 */
+            color: #ffffff; /* text-white */
+        }
+        .accordion-button {
+    background-color: #090a13; /* Default button background color */
+    color: white; /* Default button text color */
+    border: 2px solid #090a13; /* Border around the button */
+    border-radius: 15px; /* Rounded corners for buttons */
+    padding: 8px 20px; /* Smaller padding for a smaller button */
+    font-size: 14px;
+  }
+
+  .accordion-button:hover {
+    background-color: #131722; /* Hover color */
+    border-color: #131722; /* Hover border color */
+  }
+
+  .accordion-button:not(.collapsed) {
+    background-color: #090a13; /* Change color when the accordion item is open */
+    border-color: #4a5568; /* Change border color when the accordion item is open */
+  }
+
+  .accordion-item {
+    border: 1px solid #ccc; /* Border around each accordion item */
+    border-radius: 15px; /* Rounded corners for items */
+    margin-bottom: 10px; /* Space between items */
+  }
+
+  .accordion-button:not(.collapsed) {
+    color: white;
+  }
+  
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">LOGO</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Curriculum">Curriculum</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Certification">Certification</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Pricing">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="#FAQ">FAQ</a></li>
+        <li class="nav-item"><a class="btn btn-primary" href="#"  style="background-color:rgba(22,28,41,255); color: rgba(145, 181, 254, 255);">Log in</a></li>
+        <li class="nav-item"><a class="nav-link" href="#"> </a></li>
+        <li class="nav-item"><a class="btn btn-primary" href="#" style="background-color:rgba(145, 181, 254, 255); color: rgba(22,28,41,255);">Enroll Now</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h1 class="display-4"><b>Visualize Insights, Drive Decisions</b></h1>
+    <p class="lead"><b>Enroll in Our Power BI Courses</b></p>
+    <a href="#" class="btn me-2" style="background-color:rgba(22,28,41,255); color: rgba(145, 181, 254, 255);">See the curriculum</a>
+    <a href="#" class="btn me-2" style="background-color:rgba(145, 181, 254, 255); color: rgba(22,28,41,255);">Enroll now!</a>
+  </div>
+</section>
+
+<br><img src="Assets/image 116.png" style="display: block; margin: 0 auto ; border-radius: 30px;" alt="Centered Image">
+
+<!-- Benefits Section -->
+<section class="py-5">
+    <div class="container">
+      <div class="section-title">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <h5 style="color:rgba(145, 181, 254, 255);">Benefits</h5>
+        <h2><b>Why You Should Master <br> Power BI?</b></h2>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <div class="card p-4">
+            <img src="Assets/chart-2.svg">
+            <p>&nbsp;</p>
+            <h5><b>Empowering Insights</b></h5>
+            <p>Harness data visualization to make informed business decisions.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4">
+            <img src="Assets/briefcase.png">
+            <p>&nbsp;</p>
+            <h5><b>Career Advancement</b></h5>
+            <p>Power BI expertise opens doors to lucrative career opportunities.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4">
+            <img src="Assets/teacher.png">
+            <p>&nbsp;</p>
+            <h5><b>Efficient Reporting</b></h5>
+            <p>Create reports for effective communication and analysis</p>
+          </div>
+        </div>
+        <div class="col-md-4 lower-card">
+          <div class="card p-4">
+            <img src="Assets/timer.png">
+            <p>&nbsp;</p>
+            <h5><b>Flexible Work</b></h5>
+            <p> </p>
+            <p>Enjoy remote work options with Power BI skills </p>
+          </div>
+        </div>
+        <div class="col-md-4 lower-card">
+          <div class="card p-4">
+            <img src="Assets/profile-2user.png">
+            <p>&nbsp;</p>
+            <h5><b>Community Engagement</b></h5>
+            <p>Connect with community for learning and networking.</p>
+          </div>
+        </div>
+        <div class="col-md-4 lower-card">
+          <div class="card p-4">
+            <img src="Assets/status-up.png">
+            <p>&nbsp;</p>
+            <h5><b>Continuous Evolution</b></h5>
+            <p>Stay ahead in the analytics game with Power BI's evolving features.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>&nbsp;</p>
+    <div class="text-center">
+        <a href="#" class="btn me-2" style="background-color:rgba(22,28,41,255); color: rgba(145, 181, 254, 255);">Read more</a>
+        <a href="#" class="btn me-2" style="background-color:rgba(145, 181, 254, 255); color: rgba(22,28,41,255);">Enroll now!</a>
+    </div>  
+</section>
+
+<!-- Introduction Section -->
+<section class="py-5" id="Introduction">
+    <div class="container">
+      <div class="section-title">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <h5 style="color:rgba(145, 181, 254, 255);">Introduction</h5>
+        <h2><b>What Our Power BI <br> Courses Encompasses?</b></h2>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <div class="card p-4">
+            <img src="Assets/monitor.png">
+            <p>&nbsp;</p>
+            <h5><b>Interactive Lectures</b></h5>
+            <p>Engage with recorded lectures by industry experts, staying updated on design trends.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4">
+            <img src="Assets/profile-circle.png">
+            <p>&nbsp;</p>
+            <h5><b>Live Mentorship</b></h5>
+            <p>Receive guidance and feedback during live mentorship sessions.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card p-4">
+            <img src="Assets/map.png">
+            <p>&nbsp;</p>
+            <h5><b>Personalized Roadmap</b></h5>
+            <p>Navigate through a personalized learning roadmap, ensuring efficient skill acquisition.</p>
+          </div>
+        </div>
+        <div class="col-md-4 offset-md-2 lower-card">
+          <div class="card p-4">
+            <img src="Assets/box.png">
+            <p>&nbsp;</p>
+            <h5><b>Project-Based Learning</b></h5>
+            <p>Apply your skills to real-world projects, building a robust design portfolio.</p>
+          </div>
+        </div>
+        <div class="col-md-4 lower-card">
+          <div class="card p-4">
+            <img src="Assets/clipboard.png">
+            <p>&nbsp;</p>
+            <h5><b>Hands-On Workshops</b></h5>
+            <p>Participate in hands-on workshops for practical application and skill reinforcement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p>&nbsp;</p>
+    <div class="text-center">
+        <a href="#" class="btn me-2" style="background-color:rgba(22,28,41,255); color: rgba(145, 181, 254, 255);">Read more</a>
+        <a href="#" class="btn me-2" style="background-color:rgba(145, 181, 254, 255); color: rgba(22,28,41,255);">Enroll now!</a>
+    </div>  
+</section>
+
+<section class="py-5" id="Curriculum">
+<div class="text-center">
+    <h5 style="color:rgba(145, 181, 254, 255);">Curriculum</h5>
+        <h2><b>Your Learning Journey</b></h2>
+        <h4 style="color: #7b7c80;"><b>Navigating the Power BI <br>Curriculum</b></h4>
+</div>
+
+<div class="container mt-5">
+    
+    <!-- Tabs Section -->
+    <ul class="nav nav-tabs mb-4">
+        <li class="nav-item">
+            <a class="btn btn-primary" href="#" style="background-color:#131722; color: #9cb4f2; border-color: #9cb4f2; border-radius: 10px; padding-left: 40px; padding-right: 40px;">&nbsp;&nbsp;Part 1&nbsp;&nbsp;</a>
+        </li>
+        <li class="nav-item ms-3">
+            <a class="btn btn-primary" href="#" style="background-color:#0f0f14; color: #7b7c80; border-color: #2e2e38; border-radius: 10px; padding-left: 40px; padding-right: 40px;">&nbsp;&nbsp;Part 2&nbsp;&nbsp;</a>
+        </li>
+        <li class="nav-item ms-3">
+            <a class="btn btn-primary" href="#" style="background-color:#0f0f14; color: #7b7c80; border-color: #2e2e38; border-radius: 10px; padding-left: 40px; padding-right: 40px;">&nbsp;&nbsp;Part 3&nbsp;&nbsp;</a>
+        </li>
+        <li class="nav-item ms-3">
+            <a class="btn btn-primary" href="#" style="background-color:#0f0f14; color: #7b7c80; border-color: #2e2e38; border-radius: 10px; padding-left: 40px; padding-right: 40px;">&nbsp;&nbsp;Part 4&nbsp;&nbsp;</a>
+        </li>
+    </ul>
+
+    <!-- Introduction Section -->
+    <div class="row">
+        <div class="col-md-4">
+            <h1 class="section-header">Introduction to <br> Design Principles</h1>
+            <p class="description-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <ul class="left-nav">
+                <li class="active"><span class="dot">•</span>Color</li>
+                <li><span class="dot">•</span>Typography</li>
+                <li><span class="dot">•</span>Buttons</li>
+                <li><span class="dot">•</span>Images</li>
+            </ul>
+        </div>
+
+        <!-- Right Content Section -->
+        <div class="col-md-8">
+            <div class="content-box mb-4">
+                <h5 class="section-titlle">Color</h5>
+                <div class="list-item">
+                    <span>▶ UX Design vs UI Design</span>
+                    <button class="preview-btn">Preview</button>
+                    <span>9:52</span>
+                </div>
+                <div class="list-item">
+                    <span>▶ UX Design vs UI Design</span>
+                    <span>9:52</span>
+                </div>
+                <div class="list-item">
+                    <span>▶ UX Design vs UI Design</span>
+                    <span>9:52</span>
+                </div>
+                <div class="list-item">
+                    <span>▶ UX Design vs UI Design</span>
+                    <span>9:52</span>
+                </div>
+                <div class="list-item">
+                <span></span>
+                </div>
+            </div>
+
+            <div class="content-box">
+                <h5 class="section-title">Typography</h5>
+                <div class="list-item">
+                    <span>▶ UX Design vs UI Design</span>
+                    <button class="preview-btn">Preview</button>
+                    <span>9:52</span>
+                </div>
+                <div class="list-item">
+                    <span>▶ UX Design vs UI Design</span>
+                    <span>9:52</span>
+                </div>
+                <div class="list-item">
+                    <span>▶ UX Design vs UI Design</span>
+                    <span>9:52</span>
+                </div>
+                <div class="list-item">
+                    <span>▶ UX Design vs UI Design</span>
+                    <span>9:52</span>
+                </div>
+                <div class="list-item">
+                    <span></span>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats-section row mt-5">
+        <div class="col-md-3">
+            <div class="stats-box">
+                110+ <span style="color: #9cb4f2;">Lecture</span>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stats-box">
+                32 h+ <span style="color: #9cb4f2;">Duration</span>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stats-box">
+                20+ <span style="color: #9cb4f2;">Projects</span>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="stats-box">
+                Lifetime <span style="color: #9cb4f2;">Access</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+<div class="container3">
+    <h1 class="title3">Courses Mastery Achievements</h1>
+    <p class="subtitle3">Harness the power of data visualization with Power BI, transforming raw data into actionable insights.</p>
+    <div class="card-container3">
+        <div class="card3">
+            <img src="Assets/Group 1558.png" alt="Data Visualization">
+            <h2 class="card-title3">Data Visualization Mastery</h2>
+            <p class="card-text3">Create compelling visualizations for insightful data representation.</p>
+        </div>
+        <div class="card3">
+            <img src="Assets/Group 1609.png" alt="Report Development">
+            <h2 class="card-title3">Report Development Skills</h2>
+            <p class="card-text3">Design interactive reports to communicate data-driven insights.</p>
+        </div>
+        <div class="card3">
+            <img src="Assets/Group 1571.png" alt="Dashboard Creation">
+            <h2 class="card-title3">Dashboard Creation Expertise</h2>
+            <p class="card-text3">Build dynamic dashboards for comprehensive data monitoring.</p>
+        </div>
+        <div class="card3">
+            <img src="Assets/Group 1558.png" alt="Data Modeling">
+            <h2 class="card-title3">Data Modeling Proficiency</h2>
+            <p class="card-text3">Model and manage data effectively for streamlined analysis.</p>
+        </div>
+    </div>
+    <div class="buttons3">
+        <a href="#" class="read-more3">Read More</a>
+        <a href="#" class="enroll-now3">Enroll Now!</a>
+    </div>
+</div>
+</section>
+<!-- Certification -->
+<section class="py-5" id="Certification">
+<div class="text-center">
+  <h5 style="color:rgba(145, 181, 254, 255);">Certification</h5>
+      <h2><b>Earn Your Certificate</b></h2>
+</div>
+<div class="container4">
+  <div class="certificate-preview4"><b>Certificate preview</b></div>
+  <div class="content4">
+      <div class="description4">
+          Embark on a certification journey that not only validates your skills but also prepares you for the challenges of the professional landscape. Your certification project at Edubraining is a testament to your practical expertise and commitment to mastering the subject matter.
+      </div>
+      <ul class="list4">
+          <li>
+              <img src="Assets/tick-circle.png" alt="Tick">
+              <span>Immerse yourself in a hands-on project mirroring real-world scenarios.</span>
+          </li>
+          <li>
+              <img src="Assets/tick-circle.png" alt="Tick">
+              <span>Demonstrate your skills through our meticulously designed certification project.</span>
+          </li>
+          <li>
+              <img src="Assets/tick-circle.png" alt="Tick">
+              <span>Receive valuable insights and guidance from industry experts to elevate your work.</span>
+          </li>
+          <li>
+              <img src="Assets/tick-circle.png" alt="Tick">
+              <span>Earn your Edubraining certificate by successfully completing a practical, skill-based project.</span>
+          </li>
+      </ul>
+  </div>
+</div>
+</section>
+
+<!-- why -->
+<div class="text-center">
+  <h2><b>Why you should learn with us ?</b></h2>
+</div>
+<div class="container mt-5 content5">
+  <div class="col-12 col-md-6">
+      <p class="amparagraph5">At Edubraining, we go beyond teaching design—we cultivate problem-solving expertise. Our hands-on projects immerse you in real-world challenges, shaping a comprehensive skill set in UI/UX design. With our unique learning approach, you'll craft a dynamic portfolio, readying yourself for internships and rewarding career paths. Join us to turn your design skills into a powerful tool for success!</p>
+      <img src="Assets/Frame 194.png" alt="Sample Image" class="main-image5">
+  </div>
+  
+  <div class="cards-container5 col-12 col-md-6">
+      <div class="card5">
+          <img src="Assets/tick-circle.png" alt="Card 1 Image" class="main-image5">
+          <div>
+              <h5><b>&nbsp;Practical Problem-Solving</b></h5>
+              <p>Tackle real-world challenges, honing your problem-solving expertise.</p>
+          </div>
+      </div>
+      <div class="card5">
+          <img src="Assets/tick-circle.png" alt="Card 2 Image" class="main-image5">
+          <div>
+              <h5><b>&nbsp;Comprehensive Learning Journey</b></h5>
+              <p>Navigate a holistic learning path for a well-rounded education.</p>
+          </div>
+      </div>
+      <div class="card5">
+          <img src="Assets/tick-circle.png" alt="Card 3 Image" class="main-image5">
+          <div>
+              <h5><b>&nbsp;Portfolio Powerhouse</b></h5>
+              <p>Craft a robust portfolio showcasing your diverse design capabilities.</p>
+          </div>
+      </div>
+      <div class="card5">
+          <img src="Assets/tick-circle.png" alt="Card 4 Image" class="main-image5">
+          <div>
+              <h5><b>&nbsp;Internship and Career Readiness</b></h5>
+              <p>Prepare for internships and high-paying careers with confidence.</p>
+          </div>
+      </div>
+</div>
+</div>
+
+<!-- package -->
+ <p><br><br></p>
+<section class="py-5" id="Pricing">
+<div class="text-center">
+  <h2><b>Affordable Courses Packages</b></h2>
+  <p><br></p>
+</div>
+<div class="container6">
+  <div class="card-container6">
+      <!-- Self-Paced Plan -->
+      <div class="card6 card-self-paced6">
+          <div class="badge6">
+              <span>Self-Paced</span>
+          </div>
+          <div class="price-old6">$1299</div>
+          <div class="price-new6">$999</div>
+          <p>Unlock foundational knowledge with our Basic Plan. Ideal for self-paced learners</p>
+          <hr>
+          <ul>
+              <li>
+                  <i class="fas fa-check-circle"></i>
+                  <img src="Assets/tick-circle.png">
+                  <span> &nbsp;Access to all courses materials</span>
+              </li>
+              <li>
+                  <i class="fas fa-check-circle"></i>
+                  <img src="Assets/tick-circle.png">
+                  <span> &nbsp;Self-paced learning</span>
+              </li>
+              <li>
+                  <i class="fas fa-check-circle"></i>
+                  <img src="Assets/tick-circle.png">
+                  <span> &nbsp;Certificate of completion</span>
+              </li>
+          </ul>
+          <button>Start Learning Today</button>
+      </div>
+      <!-- Mentor Support Plan -->
+      <div class="card6 card-mentor-support6">
+          <div class="badge6">
+              <span>Mentor Support</span>
+          </div>
+          <div class="price-old6">$1999</div>
+          <div class="price-new6">$1,499</div>
+          <p>Elevate your learning with the Premium Plan. Includes mentor support and assignments.</p>
+          <hr>
+          <ul>
+              <li>
+                  <i class="fas fa-check-circle"></i>
+                  <img src="Assets/tick-circle.png">
+                  <span>&nbsp;Dedicated mentor support</span>
+              </li>
+              <li>
+                  <i class="fas fa-check-circle"></i>
+                  <img src="Assets/tick-circle.png">
+                  <span>&nbsp;Interactive live sessions</span>
+              </li>
+              <li>
+                  <i class="fas fa-check-circle"></i>
+                  <img src="Assets/tick-circle.png">
+                  <span>&nbsp;assignments and projects</span>
+              </li>
+          </ul>
+          <button>Upgrade to Premium Excellence</button>
+      </div>
+  </div>
+</div>
+</section>
+
+<!-- refer -->
+<br><br><br><br>
+<img src="Assets/Frame 813.png"style= "display: block; margin: 0 auto ; border-radius: 30px;">
+<br><br>
+<!-- FAQ Section -->
+<section class="py-5" id="FAQ">
+<div class="text-center">
+  <h5 style="color:rgba(145, 181, 254, 255);">FAQ</h5>
+      <h2><b>Frequently Asked Questions</b></h2>
+      <h6 style="color: #7b7c80;"><b>Uncover quick insights about Edubraining. Get ready for your tech journey by exploring<br> our FAQs. Dive in now! </b></h6>
+</div>
+<section class="py-5">
+  <div class="container">
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq1">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+            How can I get Internship?
+          </button>
+        </h2>
+        <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="faq1">
+          <div class="accordion-body">Click on "Enroll now" to apply.</div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq2">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+            How can I get internship?
+          </button>
+        </h2>
+        <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="faq2">
+          <div class="accordion-body">Click on "Enroll Now" to apply.</div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq3">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+            How can I get internship?
+          </button>
+        </h2>
+        <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="faq3">
+          <div class="accordion-body">Click on "Enroll Now" to apply.</div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq4">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+            How can I get internship?
+          </button>
+        </h2>
+        <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="faq4">
+          <div class="accordion-body">Click on "Enroll Now" to apply.</div>
+        </div>
+      </div>
+      
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq5">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+            How can I get internship?
+          </button>
+        </h2>
+        <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="faq5">
+          <div class="accordion-body">Click on "Enroll Now" to apply.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="text-center">
+      <h1>Ready to visualize data for <br>informed decisions?</h1><br>
+        <a href="#" class="btn me-2" style="background-color:rgba(22,28,41,255); color: rgba(145, 181, 254, 255);">Read more</a>
+        <a href="#" class="btn me-2" style="background-color:rgba(145, 181, 254, 255); color: rgba(22,28,41,255);">Enroll now!</a>
+<br><br><br>
+      </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
